@@ -1,0 +1,213 @@
+whoami-->who is using
+date-->to see date
+pwd-->present wrking directory-->show the current wrking path.
+
+
+ls-->list the content of directory
+ls *.txt or *.c or *.py(give the file type)-->to show only the text files
+ls -lrt-->like ls give more information
+ls -lart-->show hidden files also
+
+
+cd ..-->go back
+cd filename-->open directory
+
+
+create a new directory:
+sudo cd gmkdir filename
+
+
+create a file:
+touch filename.txt,html,etc..
+
+
+to view command:
+cat filename 
+cat>filename -->to create and wite the content-->complete writing cntrl+d to save and exit.
+cat filename1 filename2 etc..>filename -->to merge the files filename1 and filename 2 contents are merge into the fi;lename.
+
+
+tac filename-->show the file content in reverse order
+
+
+head filename-->show first 10 lines in a file
+head -n no.of_lines filename -->show the first listed  no.of lines
+head -c no.of_letters filename -->show the listed letters
+head -c -no.of_letters filename -->show except the no.of letters
+
+
+tail filename-->show last 10 lines in a file
+tail -n no.of_lines filename -->show the no.of lines in reverse
+tail -c no.of_letters filename --> listed last no.of letters
+tail -f filename -->to view the realtime content.
+ 
+
+to edit file:
+vi file name-->insert
+esc-->:wq! or esc-->:q!
+
+
+id-->shows user id/group id
+
+
+to search a word in file name:
+grep "search anything" filename.filetype
+grep -c "search word" filename-->it will display no.of matching lines only no
+grep -h "search word" filename-->it displays all the matching lines commplete line will be displayed
+grep -l "search word" * -->it displays all the file names in which pattern matches
+grep -n "search word" filename-->display all the matching lines with line number.
+grep -v "search word" filename-->display all the non matching lines.
+grep -o "search word" filename-->display only the matching word or letter.
+grep -e "search word" -e "search word" etc... filename-->used for multiple search patterns.
+grep ^search_word filename--> it will dispaly the line if the lines start with search word.
+grep searchword$filename-->it will dispaly the line if the lines ends with search word.
+grep -i "search word" filename -->if the search word in lowercase or uppercase will be displayed.
+grep -wir "search word" *-->display the wordall the folder or directory
+grep -wirl "search word" * -->to display the filename
+ 
+
+
+compare content of two different files
+diff filename1 filename 2 
+
+
+to check the network connectivity
+ping google.com-->cntrl+z-->to stop 
+telnet IP Address port number
+
+
+display the hostname ip:
+hostname -i
+
+
+nl filename -->display the line numbers
+wc filename -->give the no.of lines,word and characters available inthe file content.
+
+
+uniq filename -->remove duplicates of file content(remove only continous duplicates)
+
+
+df-->to know used and available space
+df
+df -h .-->shows fize size in mb or kb
+df -ah -->what are the file system available and present
+df -h --total -->the total file size availabe and occupied and total size
+df --ah --total-->
+df -B or --block-size
+df -B 1G-->block will be mentioned in GB 
+df -B 1M-->block will be mentioned in MB
+df -B 1K-->Block will be mentioned in KB
+df -h /etc-->shows only the particular dirctory
+df -i -->given the inod values of the file
+df -ai -->display all available inode
+df -i /etc -->display the particular inode value
+df -Th -->check the filesystem and the type of file system
+df -Tht filetype-->to show the particular filetype
+df -Thx filetype-->expect the mentioned filetype wil be shown.
+
+
+du-->disk usage
+du filename or directory(If you are in correct path)
+or 
+du file path
+du -->show the fize size
+du -h -->show the file size in kb or mb  size
+du -sh -->total size occupied by the file or directory
+du -ah -->give the total file size and displayed
+du -ch -->shows filename with  size and show the total size of the file
+du -ah .[!.]* * -->shows the hidden files
+du -ah --exclude="*.txt" -->except txt fies will shown
+du -ah --time -->modification details of the file
+  
+
+
+
+to change file zip:
+gzip filename
+gzip --help
+to unzip a file:
+
+
+cp filename and where to move file name--> copy file
+cp -r filename and where to move file name--> copy directory
+
+
+mv filename  and where to move file path-->move files
+
+
+rm filename-->remove the file not a directory 
+rm -rf -->to remove a directory
+
+
+
+to change the permission:
+read r=4,write w=2,execute x=1,0=no permission
+777-->read ,write,excecute.
+644-->read,write.
+400-->read.
+chmod 777(give the number according to the permission) filename
+or
+chmod +X filename-->give all user group and others will execute.
+user=u,group=g,others=o
+chmod u=r(user=read) filename -->only give read permission
+chmod u=w(user=write) filename
+chmod g=r(group=read) filename 
+chmod u+w filename --> add write to the existing
+chmod -rw filename 
+or
+chmod 000 filename -->to remove all the permission
+
+
+
+systemctl start filename.service
+systemctl status filename.service
+systemctl stop filename.service
+systemctl enable filename.service
+systemctl disable filename.service
+
+
+ifconfig -->show all the interfaces to connect with your system
+ifdown interface name-->to down the particular interface
+ifconfig -a -->to see the down interface
+ifup interface name -->to up the particular interface
+
+
+Ip-->advanced version of ifconfig
+ip a-->show all the interfaces to connect with your system
+ip link set interface_name down -->to down the particular interface
+ip link set interface_name up -->to up the particular interface
+ip a del ip_address/subnetmask_of_interface dev interface name -->to del IP address
+ip a add ip_address/subnetmask_of_interface dev interface name -->to add IP address
+
+
+troubleshooting :
+
+
+traceroute google.com -->to identify the traffic
+traceroute -I google.com -->to get a detailed information
+
+
+nslookup google.com -->to know the ip address and the dns name
+
+
+netstat -tu (t-tcp,u-udp,l-listen)
+netstat -tulp -->to see the ports assigined to which program
+netstat -tulpn--> to see the ports full Ip
+
+wget webiste -->to download anything directly internet
+
+curl website-->to check the site is working or not
+
+find / -name i=filename-->to find the file
+ 
+sort filename-->display the content in ascending order
+
+sudo apt purge packagename -->to delete a package
+
+
+
+
+
+
+
+  
